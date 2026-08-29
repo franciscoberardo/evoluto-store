@@ -83,9 +83,6 @@ function Header() {
               className="h-11 w-full rounded-xl border border-white/10 bg-white/[0.04] pl-11 pr-16 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-red-500/60 focus:bg-white/[0.06]"
             />
 
-            <span className="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md border border-white/10 bg-white/5 px-2 py-1 text-[10px] font-medium text-zinc-500 lg:block">
-              ⌘ K
-            </span>
           </form>
 
 
