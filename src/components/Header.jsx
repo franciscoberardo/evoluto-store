@@ -8,11 +8,14 @@ import {
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+import { useCart } from "../context/CartContext";
+
 function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [search, setSearch] = useState("");
 
   const navigate = useNavigate();
+  const { cartCount } = useCart();
 
   // BUSCAR CON CMD + K
   useEffect(() => {
@@ -111,10 +114,10 @@ function Header() {
             </Link>
 
             <Link
-              to="/productos?categoria=Suplementos"
+              to="/productos?categoria=Creatinas"
               className="text-sm font-semibold text-zinc-400 transition hover:text-white"
             >
-              Suplementos
+              Creatinas
             </Link>
 
           </nav>
@@ -143,9 +146,11 @@ function Header() {
             >
               <FaShoppingBag size={17} />
 
+            {cartCount > 0 && (
               <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-red-600 px-1 text-[10px] font-black text-white">
-                0
+                {cartCount}
               </span>
+            )}
             </Link>
 
 
