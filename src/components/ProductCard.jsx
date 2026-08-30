@@ -68,7 +68,7 @@ function ProductCard({ product }) {
           <FaStar className="text-[#f5a400]" />
 
           <span>
-            4.9
+            {product.rating}
           </span>
 
         </div>
